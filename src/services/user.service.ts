@@ -1,5 +1,5 @@
 import type { AxiosError } from "axios";
-import type { Message, Message, Room } from "../types/user.ts";
+import type { Message, Room } from "../types/user.ts";
 import { MAIN_API } from "./config.ts";
 
 export default class UserService {

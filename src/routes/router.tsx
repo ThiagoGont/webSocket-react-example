@@ -1,15 +1,15 @@
 import { createBrowserRouter } from "react-router";
-import Login from "../pages/login";
 import MainLayout from "../pages/layouts/mainLayout";
+import EnterRoom from "../pages/enterRoom";
 
 export default createBrowserRouter([
   {
-    path: "*",
+    path: "/room",
     element: <MainLayout />,
     children: [
       {
-        path: "/login",
-        element: <Login />,
+        path: "enter",
+        element: <EnterRoom />,
       },
     ],
   },

@@ -1,5 +1,5 @@
 import type { AxiosError } from "axios";
-import type { Message, Room } from "../types/user.ts";
+import type { EnterRoom, Room } from "../types/user.ts";
 import { MAIN_API } from "./config.ts";
 
 export default class UserService {
@@ -32,11 +32,11 @@ export default class UserService {
     }
   }
 
-  static async enterRoom({ roomName, password, roomId }: Room) {
+  static async enterRoom({ password, roomId }: EnterRoom) {
     try {
       const response = !roomId
         ? await MAIN_API.post("/room/enter", {
-            roomName,
+            roomId,
             password,
           })
         : null;
@@ -49,7 +49,7 @@ export default class UserService {
 
       return {
         success: true,
-        roomName: roomId ? roomName : response!.data.roomName,
+        roomName: response!.data.roomName,
       };
     } catch (err) {
       const error = err as AxiosError<{ message: string }>;

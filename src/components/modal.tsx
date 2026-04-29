@@ -7,7 +7,7 @@ interface Props {
   cancelFn?: () => void;
   primaryFn?: () => void;
   closeIcon?: React.ReactNode;
-  content?: React.ReactNode;
+  children?: React.ReactNode;
   titleContent?: React.ReactNode;
   className?: string;
 }
@@ -17,7 +17,7 @@ const Modal = ({
   cancelFn,
   primaryFn,
   closeIcon,
-  content,
+  children,
   titleContent,
   className,
 }: Props) => {
@@ -67,7 +67,7 @@ const Modal = ({
           </button>
         </div>
         {/*Content*/}
-        <div className="mb-6 flex-1">{content}</div>
+        <div className="mb-6 flex-1">{children}</div>
 
         {/*footer*/}
         <div className="border-t inline-flex gap-3 justify-end pt-4">

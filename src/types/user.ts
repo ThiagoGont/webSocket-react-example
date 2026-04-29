@@ -12,6 +12,16 @@ export type Room = {
   roomName: string;
 };
 
+export type EnterRoom = {
+  roomId: string;
+
+  password: string;
+};
+
+export type findRoom = {
+  name: string;
+};
+
 export type User = {
   id: string;
   name: string;

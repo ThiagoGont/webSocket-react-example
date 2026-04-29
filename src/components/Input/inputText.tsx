@@ -2,7 +2,7 @@ import { cn, type HTMLInputType } from "../../types/components";
 
 const InputText = ({ ...props }: HTMLInputType) => {
   return (
-    <div className="gap-1 inline-flex items-center border border-gray-200 m-2 px-2 hover:opacity-80 transition-all duration-200 focus-within:ring-1 focus-within:ring-blue-300 rounded-lg">
+    <div className="gap-1 inline-flex items-center border border-gray-200 px-2 hover:opacity-80 transition-all duration-200 focus-within:ring-1 focus-within:ring-blue-300 rounded-lg">
       {props.icon && <props.icon />}
       <input
         {...props}

@@ -7,7 +7,7 @@ const Button = ({ children, ...props }: HTMLButtonType) => {
       type="button"
       {...props}
       className={cn(
-        "cursor-pointer rounded-lg p-2 hover:bg-opacity-60 transition-opacity duration-300 ",
+        "cursor-pointer rounded-lg p-2 hover:bg-opacity-60 transition-opacity duration-300 bg-blue-500 text-white font-semibold",
         props.className,
       )}
     >

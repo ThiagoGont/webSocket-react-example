@@ -3,7 +3,7 @@ import {
   type ActionReducerMapBuilder,
 } from "@reduxjs/toolkit";
 import UserService from "../../../services/user.service";
-import type { Room, RoomState } from "../../../types/user";
+import type { EnterRoom, Room, RoomState } from "../../../types/user";
 
 export const createMessageThunk = createAsyncThunk(
   "room/message",
@@ -49,9 +49,8 @@ export const createRoomThunk = createAsyncThunk(
 
 export const enterRoomThunk = createAsyncThunk(
   "room/enter",
-  async ({ roomName, password, roomId }: Room) => {
+  async ({ password, roomId }: EnterRoom) => {
     const response = await UserService.enterRoom({
-      roomName,
       roomId,
       password,
     });
